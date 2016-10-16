@@ -207,3 +207,5 @@ let g:airline_powerline_fonts = 1
 
 set cursorline
 set colorcolumn=120
+
+map <D-4> :CtrlPBuffer<CR>
