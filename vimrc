@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'kchmck/vim-coffee-script'
 
 
 " All of your Plugins must be added before the following line
