@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
