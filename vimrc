@@ -23,6 +23,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-commentary'
+Plugin 'honza/vim-snippets'
+Plugin 'marcweber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 
 " All of your Plugins must be added before the following line
