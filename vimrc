@@ -177,5 +177,6 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 call NERDTreeHighlightFile('rb', 'Magenta', 'none', '#d33682', '#002b36')
 
+set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
