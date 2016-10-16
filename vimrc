@@ -32,6 +32,7 @@ filetype plugin indent on    " required
 
 syntax enable
 set background=dark
+"let g:solarized_visibility='low'
 colorscheme solarized
 
 set guioptions-=m  "remove menu bar
@@ -57,6 +58,7 @@ set nofoldenable
 "display tabs and trailing spaces
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▸\ ,eol:¬       " Use the same chars as textmate.
+set listchars=trail:⋅,nbsp:⋅,tab:▸\ 
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
