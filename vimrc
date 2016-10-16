@@ -206,3 +206,4 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 
 set cursorline
+set colorcolumn=120
