@@ -30,6 +30,14 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'raimondi/delimitmate'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'othree/html5.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-haml'
+Plugin 'slim-template/vim-slim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -75,7 +83,7 @@ set nofoldenable
 "display tabs and trailing spaces
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▸\ ,eol:¬       " Use the same chars as textmate.
-set listchars=trail:⋅,nbsp:⋅,tab:▸\ 
+set listchars=trail:⋅,nbsp:⋅,tab:▸\
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
