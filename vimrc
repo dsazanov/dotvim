@@ -21,6 +21,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
+Plugin 'godlygeek/tabular'
 
 
 " All of your Plugins must be added before the following line
