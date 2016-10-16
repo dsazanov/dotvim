@@ -22,6 +22,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-commentary'
 
 
 " All of your Plugins must be added before the following line
