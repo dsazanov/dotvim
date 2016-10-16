@@ -27,6 +27,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'marcweber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'raimondi/delimitmate'
 
 
 " All of your Plugins must be added before the following line
