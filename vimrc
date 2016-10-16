@@ -188,7 +188,7 @@ map <leader>ba :bufdo bd<cr>
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " How can I map a specific key or shortcut to open NERDTree?
-map <C-n> :NERDTreeToggle<CR>
+map <D-3> :NERDTreeToggle<CR>
 
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
