@@ -204,8 +204,10 @@ call NERDTreeHighlightFile('rb', 'Magenta', 'none', '#d33682', '#002b36')
 set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 set cursorline
 set colorcolumn=120
 
 map <D-4> :CtrlPBuffer<CR>
+
