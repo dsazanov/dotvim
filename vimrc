@@ -39,6 +39,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'slim-template/vim-slim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'posva/vim-vue'
 
 
 " All of your Plugins must be added before the following line
