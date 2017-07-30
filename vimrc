@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -202,6 +202,9 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 call NERDTreeHighlightFile('rb', 'Magenta', 'none', '#d33682', '#002b36')
 
+" don't collapse dirs that have only one child
+let NERDTreeCascadeSingleChildDir=0
+
 set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
@@ -212,3 +215,4 @@ set colorcolumn=120
 
 map <D-4> :CtrlPBuffer<CR>
 
+set autoread
