@@ -216,6 +216,3 @@ set colorcolumn=120
 map <D-4> :CtrlPBuffer<CR>
 
 set autoread
-
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
-let g:vue_disable_pre_processors=1
