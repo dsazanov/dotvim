@@ -40,6 +40,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'posva/vim-vue'
+Plugin 'Yggdroot/indentLine'
 
 
 " All of your Plugins must be added before the following line
@@ -216,3 +217,7 @@ set colorcolumn=120
 map <D-4> :CtrlPBuffer<CR>
 
 set autoread
+
+" let g:indentLine_color_gui = '#657b83'
+let g:indentLine_enabled = 0
+let g:indentLine_char = '⎸'
