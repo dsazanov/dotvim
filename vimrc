@@ -41,6 +41,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'posva/vim-vue'
 Plugin 'Yggdroot/indentLine'
+" Plugin 'fatih/vim-go'
 
 
 " All of your Plugins must be added before the following line
@@ -85,8 +86,7 @@ set nofoldenable
 
 "display tabs and trailing spaces
 set list
-set listchars=trail:⋅,nbsp:⋅,tab:▸\ ,eol:¬       " Use the same chars as textmate.
-set listchars=trail:⋅,nbsp:⋅,tab:▸\
+set listchars=trail:⋅,nbsp:⋅,tab:▸\ ,
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
@@ -166,7 +166,7 @@ vmap <S-Down> xp`[V`]
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
-set wildignore+=*.o,*.obj,.git,public/system/**,tmp
+set wildignore+=*.o,*.obj,.git,public/system/**,tmp,*/.git/*
 
 set backupdir=~/.vim/tmp,/tmp
 set directory=~/.vim/tmp,/tmp
@@ -221,3 +221,7 @@ set autoread
 " let g:indentLine_color_gui = '#657b83'
 let g:indentLine_enabled = 0
 let g:indentLine_char = '⎸'
+
+let g:ctrlp_clear_cache_on_exit = 0
+
+let g:NERDTreeWinPos = "right"
