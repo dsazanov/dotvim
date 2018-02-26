@@ -79,10 +79,10 @@ set expandtab
 set autoindent
 
 "folding settings
-set foldmethod=indent   "fold based on indent
+" set foldmethod=indent   "fold based on indent
 set foldmethod=manual   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable
+" set nofoldenable
 
 "display tabs and trailing spaces
 set list
@@ -166,7 +166,7 @@ vmap <S-Down> xp`[V`]
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
-set wildignore+=*.o,*.obj,.git,public/system/**,tmp,*/.git/*
+set wildignore+=*.o,*.obj,.git,public/system/**,tmp,*/.git/*,node_modules/*
 
 set backupdir=~/.vim/tmp,/tmp
 set directory=~/.vim/tmp,/tmp
@@ -223,5 +223,6 @@ let g:indentLine_enabled = 0
 let g:indentLine_char = '⎸'
 
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-let g:NERDTreeWinPos = "right"
+" let g:NERDTreeWinPos = "right"
