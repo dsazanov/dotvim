@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
     
-    if (shExpMatch(host, "*.slack-msgs.com")) {        
+    if (shExpMatch(host, "*.slack.com")) {        
         // Use SOCK proxy,
         // or fall back to a DIRECT traffic.
         // ssh -D 8000 [user]@[server]
