@@ -80,9 +80,14 @@ set autoindent
 
 "folding settings
 " set foldmethod=indent   "fold based on indent
-set foldmethod=manual   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+" set foldmethod=manual   "fold based on indent
+" set foldnestmax=3       "deepest fold is 3 levels
 " set nofoldenable
+
+set foldmethod=indent
+set foldnestmax=10
+" set nofoldenable
+set foldlevel=3
 
 "display tabs and trailing spaces
 set list
@@ -219,11 +224,18 @@ map <D-4> :CtrlPBuffer<CR>
 set autoread
 
 " let g:indentLine_color_gui = '#657b83'
-let g:indentLine_enabled = 0
+let g:indentLine_enabled = 1
 let g:indentLine_char = '⎸'
 
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" let g:ctrlp_custom_ignore = 'node_modules\|.DS_Store\|.git|app/assets'
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"   \ 'file': '\v\.(exe|so|dll)$',
+"   \ 'link': 'some_bad_symbolic_links',
+"   \ }
 
 " let g:NERDTreeWinPos = "right"
 let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_ruby_checkers = ['rubocop']
