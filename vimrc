@@ -61,7 +61,7 @@ filetype plugin indent on    " required
 
 syntax enable
 set background=dark
-"let g:solarized_visibility='low'
+" let g:solarized_visibility='low'
 colorscheme solarized
 
 set guioptions-=m  "remove menu bar
