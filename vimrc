@@ -86,8 +86,8 @@ set autoindent
 
 set foldmethod=indent
 set foldnestmax=10
-" set nofoldenable
-set foldlevel=3
+set nofoldenable
+" set foldlevel=3
 
 "display tabs and trailing spaces
 set list
@@ -239,3 +239,4 @@ let g:ctrlp_clear_cache_on_exit = 0
 " let g:NERDTreeWinPos = "right"
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_check_on_wq = 0
