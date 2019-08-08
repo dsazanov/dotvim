@@ -228,15 +228,17 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = '⎸'
 
 let g:ctrlp_clear_cache_on_exit = 0
-" let g:ctrlp_custom_ignore = 'node_modules\|.DS_Store\|.git|app/assets'
+let g:ctrlp_custom_ignore = 'node_modules\|.DS_Store\|.git'
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " let g:ctrlp_custom_ignore = {
 "   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
 "   \ 'file': '\v\.(exe|so|dll)$',
 "   \ 'link': 'some_bad_symbolic_links',
 "   \ }
+" let g:ctrlp_max_depth = 40
 
 " let g:NERDTreeWinPos = "right"
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_check_on_wq = 0
+let g:syntastic_ignore_files = ['schema.rb']
