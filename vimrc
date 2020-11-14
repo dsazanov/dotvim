@@ -32,7 +32,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'raimondi/delimitmate'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 Plugin 'othree/html5.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-haml'
@@ -42,7 +42,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'posva/vim-vue'
 Plugin 'Yggdroot/indentLine'
 " Plugin 'fatih/vim-go'
-
+Plugin 'matchit.zip'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,7 +69,7 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left NerdTree scroll bar
-set guifont=Monaco\ for\ Powerline:h14
+set guifont=Monaco\ for\ Powerline:h20
 
 set number
 
