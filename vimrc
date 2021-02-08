@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -17,7 +18,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
@@ -63,6 +63,8 @@ filetype plugin indent on    " required
 syntax enable
 set background=dark
 " let g:solarized_visibility='low'
+" let g:solarized_visibility = 'high'
+" let g:solarized_contrast = 'high'
 colorscheme solarized
 
 set guioptions-=m  "remove menu bar
@@ -243,3 +245,5 @@ let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files = ['schema.rb']
+
+call gitgutter#highlight#define_highlights()
