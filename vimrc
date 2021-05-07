@@ -71,7 +71,7 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left NerdTree scroll bar
-set guifont=Monaco\ for\ Powerline:h20
+set guifont=Monaco\ for\ Powerline:h19
 
 set number
 
@@ -238,7 +238,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|.DS_Store\|.git'
 "   \ 'file': '\v\.(exe|so|dll)$',
 "   \ 'link': 'some_bad_symbolic_links',
 "   \ }
-" let g:ctrlp_max_depth = 40
+let g:ctrlp_max_depth = 80
 
 " let g:NERDTreeWinPos = "right"
 let g:syntastic_scss_checkers = ['scss_lint']
@@ -247,3 +247,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files = ['schema.rb']
 
 call gitgutter#highlight#define_highlights()
+
+" if has('gui_running')
+"   autocmd VimEnter * NERDTree
+"   autocmd VimEnter * wincmd p
+" endif
+
+let g:snipMate = { 'snippet_version' : 1 }
