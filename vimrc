@@ -71,7 +71,7 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left NerdTree scroll bar
-set guifont=Monaco\ for\ Powerline:h19
+set guifont=Monaco\ for\ Powerline:h18
 
 set number
 
@@ -184,6 +184,7 @@ vmap < <gv
 vmap > >gv
 
 map <D-9> :nohlsearch<CR>
+map <F14> :nohlsearch<CR>
 set hlsearch
 
 set nowrap
