@@ -44,6 +44,7 @@ Plugin 'Yggdroot/indentLine'
 " Plugin 'fatih/vim-go'
 Plugin 'matchit.zip'
 Plugin 'majutsushi/tagbar'
+Plugin 'iamcco/markdown-preview.nvim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,7 +72,8 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left NerdTree scroll bar
-set guifont=Monaco\ for\ Powerline:h18
+" set guifont=Monaco\ for\ Powerline:h18
+set guifont=Monaco\ for\ Powerline:h20
 
 set number
 
@@ -201,6 +203,7 @@ map <leader>ba :bufdo bd<cr>
 
 " How can I map a specific key or shortcut to open NERDTree?
 map <D-3> :NERDTreeToggle<CR>
+map <D-2> :NERDTreeFind<CR>
 
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -240,6 +243,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|.DS_Store\|.git'
 "   \ 'link': 'some_bad_symbolic_links',
 "   \ }
 let g:ctrlp_max_depth = 80
+let g:ctrlp_max_files = 30000
 
 " let g:NERDTreeWinPos = "right"
 let g:syntastic_scss_checkers = ['scss_lint']
@@ -255,3 +259,23 @@ call gitgutter#highlight#define_highlights()
 " endif
 
 let g:snipMate = { 'snippet_version' : 1 }
+
+let g:rails_projections = {
+      \ "app/controllers/*_controller.rb": {
+      \   "test": [
+      \     "spec/controllers/{}_controller_spec.rb",
+      \     "spec/requests/{}_spec.rb"
+      \   ],
+      \ },
+      \ "spec/requests/*_spec.rb": {
+      \   "alternate": [
+      \     "app/controllers/{}_controller.rb",
+      \   ],
+      \ }}
+
+let g:NERDTreeWinSize=40
+
+" function! AckClipboard()
+"     execute printf('Ack! -Q -- "%s"', substitute(@", '\([%"\\]\)', '\\\1', 'g'))
+" endfunction
+" vnoremap <A-f> y:call AckClipboard()<CR>
