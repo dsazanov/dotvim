@@ -44,7 +44,7 @@ Plugin 'Yggdroot/indentLine'
 " Plugin 'fatih/vim-go'
 Plugin 'matchit.zip'
 Plugin 'majutsushi/tagbar'
-Plugin 'iamcco/markdown-preview.nvim'
+" Plugin 'iamcco/markdown-preview.nvim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
