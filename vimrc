@@ -10,7 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -21,7 +21,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
-Plugin 'godlygeek/tabular'
+" Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-commentary'
 Plugin 'honza/vim-snippets'
 Plugin 'marcweber/vim-addon-mw-utils'
@@ -30,20 +30,20 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'raimondi/delimitmate'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'terryma/vim-multiple-cursors'
 " Plugin 'plasticboy/vim-markdown'
-Plugin 'othree/html5.vim'
-Plugin 'mxw/vim-jsx'
+" Plugin 'othree/html5.vim'
+" Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-haml'
-Plugin 'slim-template/vim-slim'
-Plugin 'cakebaker/scss-syntax.vim'
+" Plugin 'slim-template/vim-slim'
+" Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'posva/vim-vue'
+" Plugin 'posva/vim-vue'
 Plugin 'Yggdroot/indentLine'
 " Plugin 'fatih/vim-go'
 Plugin 'matchit.zip'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 " Plugin 'iamcco/markdown-preview.nvim'
 
 " All of your Plugins must be added before the following line
@@ -74,6 +74,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left NerdTree scroll bar
 " set guifont=Monaco\ for\ Powerline:h18
 set guifont=Monaco\ for\ Powerline:h20
+" set guifont=Monaco\ for\ Powerline:h22
 
 set number
 
@@ -251,7 +252,7 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files = ['schema.rb']
 
-call gitgutter#highlight#define_highlights()
+" call gitgutter#highlight#define_highlights()
 
 " if has('gui_running')
 "   autocmd VimEnter * NERDTree
