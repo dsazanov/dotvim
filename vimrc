@@ -46,6 +46,8 @@ Plugin 'matchit.zip'
 " Plugin 'majutsushi/tagbar'
 " Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'catppuccin/vim'
+Plugin 'myusuf3/numbers.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,15 +69,29 @@ set background=dark
 " let g:solarized_visibility='low'
 " let g:solarized_visibility = 'high'
 " let g:solarized_contrast = 'high'
-colorscheme solarized8_flat
+" colorscheme solarized8_flat
+colorscheme catppuccin_mocha
+" colorscheme catppuccin_macchiato
+" let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+" colorscheme solarized
+
+hi DiffAdd      gui=none    guifg=#A6E3A1       guibg=NONE
+" hi DiffChange   gui=none    guifg=NONE          guibg=#e5d5ac
+hi DiffDelete   gui=bold    guifg=#F38BA8       guibg=NONE
+" hi DiffText     gui=none    guifg=NONE          guibg=#8cbee2
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left NerdTree scroll bar
 " set guifont=Monaco\ for\ Powerline:h18
-set guifont=Monaco\ for\ Powerline:h20
+" set guifont=Monaco\ for\ Powerline:h20
+" set guifont=BitstromWera\ Nerd\ Font\ Mono:h20
+set guifont=JetBrainsMonoNL\ Nerd\ Font\ Mono:h20
+" set guifont=DejaVuSansM\ Nerd\ Font\ Mono:h20
+" set guifont=FiraMono\ Nerd\ Font\ Mono:h22
 " set guifont=Monaco\ for\ Powerline:h22
+" set guifont=Monaco:h20
 
 set number
 
@@ -86,12 +102,12 @@ set expandtab
 set autoindent
 
 "folding settings
-" set foldmethod=indent   "fold based on indent
-set foldmethod=manual   "fold based on indent
+set foldmethod=indent   "fold based on indent
+" set foldmethod=manual   "fold based on manual
 " set foldmethod=syntax   "fold based on syntax
-" set foldnestmax=3       "deepest fold is 3 levels
-" set nofoldenable
-" set foldlevel=3
+set foldnestmax=6       "deepest fold is 3 levels
+set nofoldenable
+set foldlevel=6
 
 "display tabs and trailing spaces
 set list
@@ -222,6 +238,10 @@ set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#term#enabled = 1
+" let g:airline#extensions#cursormode#enabled = 1
+let g:airline_theme = 'catppuccin_mocha'
+" let g:airline_theme = 'catppuccin_macchiato'
 
 set cursorline
 set colorcolumn=140
@@ -242,8 +262,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|.DS_Store\|.git'
 "   \ 'file': '\v\.(exe|so|dll)$',
 "   \ 'link': 'some_bad_symbolic_links',
 "   \ }
-let g:ctrlp_max_depth = 80
-let g:ctrlp_max_files = 30000
+let g:ctrlp_max_depth = 100
+let g:ctrlp_max_files = 100000
 
 " let g:NERDTreeWinPos = "right"
 " let g:syntastic_scss_checkers = ['scss_lint']
@@ -289,3 +309,6 @@ if executable('ag')
   cnoreabbrev Ag Ack
   cnoreabbrev AG Ack
 endif
+
+" let colorscheme=catppuccin_mocha
+set termguicolors
