@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
@@ -45,6 +45,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'matchit.zip'
 " Plugin 'majutsushi/tagbar'
 " Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'lifepillar/vim-solarized8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,7 +67,7 @@ set background=dark
 " let g:solarized_visibility='low'
 " let g:solarized_visibility = 'high'
 " let g:solarized_contrast = 'high'
-colorscheme solarized
+colorscheme solarized8_flat
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -86,13 +87,10 @@ set autoindent
 
 "folding settings
 " set foldmethod=indent   "fold based on indent
-" set foldmethod=manual   "fold based on indent
+set foldmethod=manual   "fold based on indent
+" set foldmethod=syntax   "fold based on syntax
 " set foldnestmax=3       "deepest fold is 3 levels
 " set nofoldenable
-
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
 " set foldlevel=3
 
 "display tabs and trailing spaces
@@ -205,6 +203,7 @@ map <leader>ba :bufdo bd<cr>
 " How can I map a specific key or shortcut to open NERDTree?
 map <D-3> :NERDTreeToggle<CR>
 map <D-2> :NERDTreeFind<CR>
+map <D-5> :AckFromSearch<CR>
 
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -225,7 +224,7 @@ let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 
 set cursorline
-set colorcolumn=120
+set colorcolumn=140
 
 map <D-4> :CtrlPBuffer<CR>
 
@@ -247,7 +246,7 @@ let g:ctrlp_max_depth = 80
 let g:ctrlp_max_files = 30000
 
 " let g:NERDTreeWinPos = "right"
-let g:syntastic_scss_checkers = ['scss_lint']
+" let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files = ['schema.rb']
@@ -280,3 +279,13 @@ let g:NERDTreeWinSize=40
 "     execute printf('Ack! -Q -- "%s"', substitute(@", '\([%"\\]\)', '\\\1', 'g'))
 " endfunction
 " vnoremap <A-f> y:call AckClipboard()<CR>
+
+" Use The Silver Searcher if available
+" https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+  cnoreabbrev ag Ack
+  cnoreabbrev aG Ack
+  cnoreabbrev Ag Ack
+  cnoreabbrev AG Ack
+endif
